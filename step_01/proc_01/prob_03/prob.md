@@ -21,3 +21,7 @@
 - 파일이름은 Mars_Base_Inventory_List.bin
 저장된 Mars_Base_Inventory_List.bin 의 내용을 다시 읽어 들여서 화면에 내용을 출력한다.
 - 텍스트 파일과 이진 파일 형태의 차이점을 설명하고 장단점을 함께 설명할 수 있게 준비한다.
+
+
+
+

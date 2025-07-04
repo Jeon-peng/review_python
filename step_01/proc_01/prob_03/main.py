@@ -133,3 +133,39 @@ with open(output_file, "w", encoding="utf-8", newline="") as f:
     writer.writerow(["Substance", "Weight", "Specific Gravity", "Strength", "Flammability"])
     # 내용
     writer.writerows(high_flammability_list)
+    
+    
+
+
+
+
+# ## 제약사항
+# - Python에서 기본 제공되는 명령어만 사용해야 하며 별도의 라이브러리나 패키지를 사용해서는 안된다.
+# - 파일을 다루는 부분들은 모두 예외처리가 되어 있어야 한다.
+# ## 보너스 과제
+# - 인화성 순서로 정렬된 배열의 내용을 이진 파일형태로 저장한다. 
+# - 파일이름은 Mars_Base_Inventory_List.bin
+# 저장된 Mars_Base_Inventory_List.bin 의 내용을 다시 읽어 들여서 화면에 내용을 출력한다.
+# - 텍스트 파일과 이진 파일 형태의 차이점을 설명하고 장단점을 함께 설명할 수 있게 준비한다.
+
+
+
+import pickle
+
+# high_flammability_mars_list 는 인화성 순으로 정렬된 리스트라고 가정
+# "wb": 쓰기 + 바이너리 모드 (write binary)
+# pickle.dump(): 객체를 파일에 직렬화하여 저장
+
+print('*'*100)
+with open("Mars_Base_Inventory_List.bin", "wb") as bin_file:
+    pickle.dump(high_flammability_mars_list, bin_file)
+
+    
+    
+with open("Mars_Base_Inventory_List.bin", "rb") as bin_file:
+    loaded_data = pickle.load(bin_file)
+
+# 출력
+for row in loaded_data:
+    print(row)
+print('*'*100)
