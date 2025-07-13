@@ -76,6 +76,9 @@ def 함수이름(위치 인자, 기본값 인자, *가변 인자, 키워드 전�
 """
 # 돔의 길이를 재어보니 10m인 반구체의 형태를 한 돔의 전체 면적 구하기
 # 사용 할 수 있는 재료는 유리, 알루미늄, 탄소강이 있다
+"""
+[해당 sphere_area은 V1임. 1번 순서 먼저 진행하기 위해 제작된 함수. 이후 3번, 4번 문제를 해결한 sphere_area는 아래에 위치.]
+ 
 def sphere_area(material_input="유리", thickness_input=0.01, diameter_input=10):
     global material, diameter, thickness, area, weight
 
@@ -92,7 +95,7 @@ def sphere_area(material_input="유리", thickness_input=0.01, diameter_input=10
     
 
     return area, weight
-    
+"""
     
     
     
@@ -154,7 +157,7 @@ print(f"입력된 두께: {thickness}")
 # 화성 중력 (지구 중력의 약 0.38배)
 # 4. 소수점 이하 세 자리까지만 출력
 MARS_GRAVITY_RATIO = 0.38
-def mars_sphere_area(material_input="유리", thickness_input=0.01, diameter_input=10):
+def sphere_area(material_input="유리", thickness_input=0.01, diameter_input=10):
     global material, diameter, thickness, area, weight
 
     material = material_input
@@ -177,7 +180,7 @@ def mars_sphere_area(material_input="유리", thickness_input=0.01, diameter_inp
     
     
 # 함수 실행
-area, weight = mars_sphere_area(meterial, thickness, diameter)
+area, weight = sphere_area(meterial, thickness, diameter)
 
 # 결과 출력
 print(f"재질 =⇒ {material}, 지름 =⇒ {diameter}, 두께 =⇒ {thickness}, 면적 =⇒ {area}, 무게 =⇒ {weight}kg")
